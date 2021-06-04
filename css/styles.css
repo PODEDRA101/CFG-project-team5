@@ -228,7 +228,7 @@ div.scrollcards .card img {
   white-space: normal; 
   -moz-white-space: normal;
   text-align:left;
-  font-size:30px;
+  font-size:8vh;
   font-style: italic; 
   font-family: 'Montserrat', sans-serif;
   
@@ -257,8 +257,8 @@ div.scrollcards .card img {
   
   float:center;
   text-align:center;
-  min-height:200px;
-  min-width:200px;
+  min-height:400px;
+  min-width:400px;
 } */
 
 
