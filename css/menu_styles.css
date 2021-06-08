@@ -1,0 +1,362 @@
+html {
+  height:100%;
+}
+body {
+  display: flex;  /* setting "display: flex" allows its children (e.g. "main" below) to use the "flex" property */
+  flex-direction: column;
+  /* padding-top: 56px;  */ /* allow enough space for a fixed navbar (56px is the height of the navbar here) */
+  min-height: 100vh;  /* i.e minimum width is 100% of the "viewport height"... i.e the full screen height */
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  /* font-weight:600; */
+}
+/* width */
+body::-webkit-scrollbar   {
+  width:20px;
+  height:20px;
+
+ 
+}
+
+/* Track/background */
+body::-webkit-scrollbar-track {
+  background: white;
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb:vertical {
+  background: #FEC8C1; 
+  border: 9.4px white solid;
+  border-radius: 50vh; 
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+  background: #FEC8C1; 
+  border: 8px white solid;
+  border-radius: 50vh; 
+  
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #FE9C8F; 
+  
+ 
+}
+
+
+main {
+  flex: 1;  /* makes the <main> grow (we want it to grow so that it pushes <footer> to the bottom of page)*/
+}
+.navbar{
+  min-height:12px;
+  padding:10px;
+}
+.navbar  a {
+  font-size: 8.5px;
+}
+.navbar-light .navbar-brand {
+  background-color:white;color:#3A3B3C;font-weight:600;letter-spacing: 3px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #3A3B3C;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #3A3B3C;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #FE9C8F !important;
+}
+
+
+.hero {
+  color:black;
+  background-image: url("/mock_project_demo-master/images/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65vh;
+  opacity: 0.65;
+  overflow:hidden;
+ 
+} 
+
+.hero h1 {
+  text-align:center;
+  font-weight:800;
+  padding-top:30vh;
+  font-size:10vh;
+  
+  /* text-transform: uppercase; */
+  
+}
+
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+
+}
+
+hr {
+  /* add some fancy styling to the horizontal lines */
+  width: 75%;
+  border: 1.5px solid #ddd;
+  border-radius: 50%;
+}
+.header1 {
+  margin:30px 0 0 0;
+  text-align:center;
+}
+.header1 h1 {
+  text-align:center;
+  font-weight:800;
+}
+.header1 p {
+  font-style: italic;
+  font-size:11px;
+  margin-top:10px;
+  letter-spacing:1px;
+
+
+}
+
+/* gallery */
+section{
+/*   margin: 50px 100px 100px 100px;
+ */  float:center;
+  width:100%;
+  height: 500px; 
+  
+  
+  
+  
+}
+.container-fluid {
+  min-width:100%;
+  max-height: 500px; 
+}
+
+
+.card {
+  border: 1px solid #ebebeb;
+  margin: 10px 5px 10px 5px;
+  /*transition: .6s ease; */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing:1px;
+  font-size:8px; 
+
+
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card-block{
+   padding: 15px;
+   overflow-y: scroll;
+   white-space: normal;
+   -moz-white-space: normal;
+   height:100px;
+   margin-top:10px;
+   
+  /*word-break does not work but white-space works on chrome*/
+ 
+}
+
+
+.scrollcards {
+  overflow: auto;
+  white-space: nowrap;
+  float:center;
+  margin-left:20%;
+  position:relative;
+  margin-right:20%;
+
+}
+/* width */
+.scrollcards::-webkit-scrollbar {
+  width:20px;
+  height:20px;
+ 
+}
+
+/* Track/background */
+.scrollcards::-webkit-scrollbar-track {
+  background: white;
+  
+  
+  
+}
+ 
+/* Handle */
+.scrollcards::-webkit-scrollbar-thumb {
+  background: #FEC8C1; 
+  border: 9.5px white solid;
+  border-radius: 50vh; 
+  
+
+}
+
+/* Handle on hover */
+.scrollcards::-webkit-scrollbar-thumb:hover {
+  background:  #FE9C8F; 
+  
+ 
+}
+
+/*-------------------------*/
+/* for mini cards width */
+.card-block::-webkit-scrollbar {
+  width:20px;
+  height:20px;
+  
+}
+
+/* Track/background */
+.card-block::-webkit-scrollbar-track {
+  background: white; 
+  margin-top:20px;
+ 
+  
+}
+ 
+/* Handle */
+.card-block::-webkit-scrollbar-thumb {
+  background: #FEC8C1; 
+  border: 9.5px white solid;
+  border-radius: 50vh; 
+
+}
+
+/* Handle on hover */
+.card-block::-webkit-scrollbar-thumb:hover {
+  background: #FE9C8F; 
+}
+
+div.scrollcards .card {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    height: 300px; 
+    width: 174px; /* width of cards */
+    
+}
+div.scrollcards .card img {
+  display: inline-block;
+  height: auto; 
+  width: 153px; /*width of card images, should align with scroll bar*/
+  
+}
+/*----------END MENU CAROUSEL-----------------*/
+
+/*---------OUR SPECIALITIES------------*/
+.specialities-container{
+ height:500px;
+ width:90%;
+ 
+ position:relative;
+ margin-bottom:0%;
+ margin-top:0%;
+ margin-left:13%;
+ /* background: red; */
+}
+.specialities-boxes{
+  width:40%;
+  height:40%;
+  float:left; 
+  top:0;
+  margin:15px; 
+ 
+}
+.specialities-boxes h1{
+  padding-top:23%;
+  padding-left:26%;
+  margin-right:9%;
+  float:center;
+  white-space: normal; 
+  -moz-white-space: normal;
+  text-align:left;
+  font-style: italic; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight:800;
+  
+  
+}
+.specialities-text {
+  
+  float:center;
+  white-space: normal;
+  -moz-white-space: normal;
+  text-align: center;
+ /*  background-color: grey;  */
+ 
+}
+.specialities-text p{
+  margin-top:35%;
+  padding-left:0px;
+  padding-right:0px;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+.specialities-text img {
+  height:40%; width:40%;
+  float:center;
+  text-align:center;
+  min-height:150px;
+  min-width:150px;
+} */
+
+
+
+/*----------FOOTER START-----------------*/
+footer {
+  /*  display: flex;  */ /* allows use of "justify-content" property */
+   justify-content: left;  /* horizontally centers the contents (the social icons) */
+   background-color:white;
+   margin-bottom:10px;
+   
+ }
+ 
+ footer p {
+  line-height:2px;
+  padding:0 30px 0 30px;
+
+   text-decoration: none!important;
+   font-size:7px;
+   font-weight:bold;
+   letter-spacing: 1px;
+   
+ }
+
+
+#go-top-button {
+  width: 30px;
+  height: 30px;
+
+  display: none;  /* Hidden by default */
+  position: fixed;  /* Fixed/sticky position */
+  bottom: 30px;  /* Place the button 20px from the bottom of the page */
+  right: 10px;  /* Place the button 30px from the right */
+  z-index: 99;  /* Make sure it does not overlap */
+  border-radius: 50%;  /* makes it round (circle if width and height are the same) */
+  background-color:#FEC8C1;
+  border: #FEC8C1;
+  opacity:0.90;
+  font-size:9px; text-align:center; line-height:0;
+  padding:0;margin:0;
+  font-weight:600;
+  color:#3A3B3C;
+}
+
+#go-top-button:hover {
+  
+  background-color:#FE9C8F;
+  border: #FE9C8F;
+  color:#F9F9F9;
+}
